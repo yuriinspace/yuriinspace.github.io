@@ -47,6 +47,7 @@
 			</div>
 
 		</div>
+
 		<!-- End left column -->
 
 		<!-- Right column with youtube clip -->
@@ -59,6 +60,88 @@
 
 	</div>
 	</div>
+
+	<form id="signup-form" class="form-horizontal" method="POST" action="/signup/" autocomplete="off">
+	<input type='hidden' name='csrfmiddlewaretoken' value='gtYwRHXk2xtxFcIoh0yrhWwHOk86P3RN' />
+	<input id="nexturl" type="hidden" name="next" value="" />
+	<input type="hidden" name="company" value="" />
+    
+    
+    <div class="signup-wrapper">
+	    <fieldset>
+	      <div class="control-group">
+	        <label class="control-label" for="inputFirstname">First name</label>
+	        <div class="controls">
+	          <input name="first_name" type="text" id="inputFirstname" placeholder="" autocomplete="off" >
+	        </div>
+	      </div>
+	      <div class="control-group">
+	        <label class="control-label" for="inputLastname">Last name</label>
+	        <div class="controls">
+	          <input name="last_name" type="text" id="inputLastname" placeholder="" autocomplete="off" >
+	        </div>
+	      </div>
+	      <div class="control-group">
+			<label class="control-label" for="selectBusiness">Type of Business</label>
+			<div class="controls">
+				<select name="business_type" id="selectBusiness">
+					<option value="">Please select a category</option>
+		  		
+		  		<option value="Broadcaster" >Broadcaster</option>
+		  		
+		  		<option value="Radio Channel" >Radio Channel</option>
+		  		
+		  		<option value="Media Company" >Media Company</option>
+		  		
+		  		<option value="Production Company" >Production Company</option>
+		  		
+		  		<option value="Post Production Company" >Post Production Company</option>
+		  		
+		  		<option value="Freelancer" >Freelancer</option>
+		  		
+		  		<option value="Advertising/Communication Agency" >Advertising/Communication Agency</option>
+		  		
+		  		<option value="Game Developer" >Game Developer</option>
+		  		
+		  		<option value="Corporate Company" >Corporate Company</option>
+		  		
+		  		<option value="Online Platform (e.g YouTube or similar)" >Online Platform (e.g YouTube or similar)</option>
+		  		
+		  		<option value="Charity Organisation" >Charity Organisation</option>
+		  		
+		  		<option value="School" >School</option>
+		  		
+		  		<option value="Restaurant/Hotel/Store" >Restaurant/Hotel/Store</option>
+		  		
+		  		<option value="Other" >Other</option>
+		  		
+		 		</select>
+			</div>
+		  </div>
+	      <div class="control-group">
+	        <label class="control-label" for="inputEmail">Email</label>
+	        <div class="controls">
+	          <input name="email" type="text" id="inputEmail" class="error-ok" placeholder="" autocomplete="off" >
+	        </div>
+	      </div>
+	    </fieldset>
+
+	    <fieldset>
+	      <div class="control-group">
+	        <label class="control-label" for="inputPassword">Password</label>
+	        <div class="controls">
+	          <input name="password" type="password" id="inputPassword" placeholder="" autocomplete="off">
+	        </div>
+	      </div>
+	    </fieldset>
+	    <div id="license-text-div"></div>
+	    <label class="checkbox" for="endUserAgreementSigned">
+            <input id="endUserAgreementSigned" class="agreement-checkbox" type="checkbox" name="endUserAgreementSigned" value="agreed">
+	    	 I have read and agree to the <a href="/static_media/html/privacy_policy.html" target="_blank"  alt="Link to Privacy Policy" title="Link to Privacy Policy" class="license-text">Privacy Policy</a> & <a href="/static_media/html/end_user_agreement.html" target="_blank" alt="Link to End User Agreement" title="Link to End User Agreement" class="license-text">End User Agreement</a>
+	    </label>
+	    <button id="signup-btn" class="btn btn-large btn-danger btn-wide gothic" type="submit"><span class="loading-indicator">SIGN UP</span></button>
+    </div>
+</form>
 	<!-- End first section -->
 
 
