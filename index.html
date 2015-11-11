@@ -161,6 +161,210 @@
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/qyJzvP64xuQ?list=PLuIQYSWMlyQWvGJl1QXEy1NvCdPySFZ6t" frameborder="0" allowfullscreen></iframe>
 	</div>
 	<!-- End third section -->
+	<div class="hr-header-gray">
+	<hr>
+	<span class="airy-font-gray">Partnership Sign-ups</span>
+</div>
+<!-- <div id="partner-login-table-wrapper"> -->
+<div src="" class="partner-logo-img" ><img src=""></div>
+<!-- <h2 class="partner-title gothic">PARTNERSHIP/MCN LOGIN</h2> -->
+<div class="partner-wrapper">
+	<select id="select_partner">
+		<option disabled selected>Choose partner</option>
+		<optgroup>
+			<option id="2bTube" alt="2btube" value="/accounts/youtube_auth/">2btube</option>
+			<option id="Age-of-Media" alt="Age-of-Media" value="/accounts/youtube_auth/">Age of Media</option>
+			<option id="Awesomeness" alt="Awesomeness" value="/accounts/youtube_auth/">Awesomeness</option>
+			<option id="Base79" alt="Base79" value="/accounts/youtube_auth/">Base79</option>
+			<option id="Bentpixels" alt="Bentpixels" value="http://dashboard.bentpixels.com/oauth/authorize?client_id=6868987f13a7da727eab7b74e91c0024dad361bdcbe72da6e27842f1ff6d06f7&redirect_uri=https%3A%2F%2Fplayer.epidemicsound.com%2Faccounts%2Fauth%2Fbentpixels%2Fbentpixels%2F&response_type=code">Bentpixels</option>
+			<option id="BroadbandTV" alt="BroadbandTV" value="/accounts/youtube_auth/">BroadbandTV</option>
+			<option id="ChannelFlip" alt="ChannelFlip" value="/accounts/youtube_auth/">ChannelFlip</option>
+			<option id="Creative-Nation" alt="Creative-Nation" value="/accounts/youtube_auth/">Creative Nation</option>
+			<option id="Curse-Network" alt="Curse-Network" value="https://www.unionforgamers.com/endpoints/oauth2/auth?client_id=epidemic%2Dsound&scope=https%3A%2F%2Fwww.unionforgamers.com.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.unionforgamers.com.com%2Fmcn%2Fpartnerinfo&redirect_uri=https%3A%2F%2Fplayer.epidemicsound.com%2Faccounts%2Fauth%2Fcurseinc%2F&response_type=code">Curse Network</option>
+			<!-- <option id="Digital Nation Network" value="/accounts/youtube_auth/">Digital Nation Network</option> -->
+			<option id="Exonia-Network" alt="Exonia-Network" value="http://partner.exonia.net/apps/music" id="exonia-partner-login-link">Exonia Network</option>
+			<option id="Freedom!" alt="Freedom!" value="http://www.freedom.tm/login?src=3f5db742a8ebcab4c2c699247adc6a40">Freedom!</option>
+			<option id="Frederator" alt="frederator" value="/accounts/youtube_auth/">Frederator</option>
+			<option id="Gamellon" alt="Gamellon" value="/accounts/youtube_auth/">Gamellon</option>
+			<option id="Maker-Studios" alt="Maker-Studios" value="https://max.makerstudios.com/api/launch/3ba2debe/">Maker Studios</option>
+			<option id="Maze" alt="Maze" value="/accounts/youtube_auth/">Maze</option>
+			<option id="MediaKraft" alt="MediaKraft" value="http://cockpit.mediakraft.net">MediaKraft</option>
+			<option id="Melberries" alt="Melberries" value="https://desk.melberries.com/oauth2/authorize?response_type=code&client_id=54d9e5527dd917912e798a2b&redirect_uri=https%3A%2F%2Fplayer.epidemicsound.com%2Faccounts%2Fauth%2Fmelberries%2F">Melberries</option>
+			<option id="MiTu" alt="MiTu" value="/accounts/youtube_auth/">MiTu</option>
+			<!-- <option id="Rightster" alt="Rightster" value="/accounts/youtube_auth/">Rightster</option> -->
+			<option id="Scalelab" alt="Scalelab" value="https://my.scalelab.com/oauthServer/authorize?client_id=epidemicsound&redirect_uri=https%3A%2F%2Fplayer.epidemicsound.com%2Faccounts%2Fauth%2Fscalelab%2F&response_type=code&state=1">Scalelab</option>
+			<option id="Studio71" alt="Studio71" value="/accounts/youtube_auth/">Studio71</option>
+			<option id="Stylehaul" alt="Stylehaul" value="/accounts/youtube_auth/">Stylehaul</option>
+			<option id="Tubeone-Networks" alt="Tubeone-Networks" value="http://tools.tubeone.com/">Tubeone Networks</option>
+			<option id="Whitecast" alt="Whitecast" value="/accounts/youtube_auth/">WhiteCast Network</option>
+			<option id="United-Screens" alt="United-Screens" value="/accounts/youtube_auth/">United Screens</option>
+			<!-- <option id="Xmedia" alt="Xmedia" value="/accounts/youtube_auth/">Xmedia Digital</option> -->
+			<option id="Zoopa-Network" alt="Zoopa-Network" value="/accounts/youtube_auth/">Zoopa Network</option>
+		</optgroup>
+		<optgroup>
+			<option id="other" value="/accounts/youtube_auth/">Other/YouTube login</option>
+		</optgroup>
+	</select>
+<button id="partner_login_btn" class="es-login-btn gothic">Log in</button>
+</div>
+
+
+
+<script type="text/javascript" src="/static_media/js/jquery-1.8.2.min.js">&nbsp;</script>
+<script type="text/javascript" src="/static_media/js/bootstrap.min.orig.js">&nbsp;</script>
+
+<script type="text/javascript" src="/static_media/js/jquery.validate.min.js">&nbsp;</script>
+<script type="text/javascript">
+
+	if (window.location.hash.indexOf('#') != -1) {
+	   	var next = window.location.origin + '/' + window.location.hash;
+	  	$('#nexturl').val(next);
+	}
+
+	if (window.location.href.indexOf('?next=') != -1) {
+	   	var next = window.location.origin + '/' + window.location.href.split('?next=').pop();
+	  	$('#nexturl').val(next);
+	}
+ 
+	 $('.license-text').click(function(e){
+	 	e.preventDefault();
+	 	$("#license-text-div").load($(this).attr("href"));
+	 	$("#license-text-div").show();
+	 });
+
+	 
+
+ 	$.validator.addMethod('validDomain', function(value, element) {
+     	var selector = $("#inputEmail");
+     	var email_address = $(selector).val();
+ 		var send_data = {'email' : email_address};
+ 		var response;
+
+ 		if ((email_address != "") && (email_address.indexOf('@') != -1)) {
+ 			$.ajax({
+ 		        type: "GET",
+ 		        url: "/accounts/validate_email/",
+ 		        data: send_data,
+ 		        async: false,
+ 		        success: function(returned_data){
+ 		        	if(returned_data.status == true)
+ 		        		response = true;
+ 		        	else
+ 		        		response = false;
+ 		        },
+ 		        error: function(returned_data) {}
+ 		    });
+    } else {
+ 			response = false;
+    }
+ 		return response;
+ 	}, 'Please enter a valid email address.');
+
+ 	$('#signup-form').validate({
+        onkeyup: false,
+        rules: {
+            first_name: {
+                required: false
+            },
+            last_name: {
+                required: false
+            },
+            business_type: {
+                required: true,
+            },
+            email: {
+                required: true,
+                email: true,
+                validDomain: true
+            },
+            password: {
+                minlength: 8,
+                required: true
+            },
+            endUserAgreementSigned: {
+            	required: true
+            }
+        },
+        ignore: ".error-ok",
+        errorClass: 'invalid',
+        validClass: 'valid',
+        errorPlacement: function(error, element) {
+            element.tooltip('destroy');
+            element.tooltip({
+                trigger: 'manual',
+                placement: 'right',
+                title: $(error[0]).text()
+            }).tooltip('show');
+        },
+        highlight: function(element) {
+        // $(element).tooltip('show');
+        },
+        unhighlight: function(element) {
+            $(element).tooltip('hide');
+        },
+ 	});
+
+    $( document ).ready(function() {
+        // Make sure the logo Id is the same as the logo image name.
+        // If no logo is provided you can add the Id to the exclude list below.
+        var exclude = ["Age-of-Media","Awesomeness", "Frederator", "MiTu","Whitecast","United-Screens"];
+
+        var selected_partner = document.getElementById('select_partner');
+        $('#partner_login_btn').text("Sign up");
+
+        selected_partner.onchange = function(){
+            var partner_link =  selected_partner.options[selected_partner.selectedIndex].value;
+            var id =  selected_partner.options[selected_partner.selectedIndex].id;
+            var image_wrapper = $('.partner-logo-img');
+            image_wrapper.stop(true, true);
+
+            $('#partner_login_btn').addClass("btn_active");
+
+            if ($.inArray(id, exclude) == -1) {
+                var new_image = image_wrapper.children("img").attr("src", "/static_media/images/partner_logos/"+id+".png");
+
+                new_image.load(function() {
+                    var new_image_height = this.naturalHeight;
+                    image_wrapper.animate({
+                        height: new_image_height
+                    },{
+                        duration: 200,
+                        complete: function() {
+                            image_wrapper.css("overflow","visible");
+                        }
+                    });
+                });
+
+            } else {
+                image_wrapper.stop(true, true);
+                image_wrapper.animate({
+                     height: 0
+                },{
+                    duration: 200,
+                    complete: function() {
+                        image_wrapper.css("overflow","hidden");
+                        image_wrapper.children("img").attr("src", "");
+                    }
+                });
+            }
+
+            $('#partner_login_btn').click(function (event){
+                event.preventDefault();
+                window.location.href=partner_link;
+                $('#partner_login_btn').addClass("es-login-btn");
+                $('#partner_login_btn').attr("disabled", true);
+            });
+
+        }
+    });
+
+</script>
+
+
+
+
+      </div>
+    </div>
 
 </body>
 
